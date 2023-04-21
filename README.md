@@ -46,21 +46,24 @@ DAO layer, Service layer,
 Spring Data Rest (automatically creating Rest API given Entity and Primary key) -
 Configuration, Pagination and Sorting
 
-```Application Architechture Version 1 
+```
+Application Architechture Version 1 
   graph LR
       A[Employee REST Controller]-->B[Employee Service]
       B-->C[Employee DAO; JPA API]
       C-->D[DB]
 ```
 
-```Application Architechture Version 2
+```
+Application Architechture Version 2
   graph LR
       A[Employee REST Controller]-->B[Employee Service]
       B-->C[Employee DAO; Spring Data JPA]
       C-->D[DB]
 ```
 
-```Application Architechture Version 3
+```
+Application Architechture Version 3
   graph LR
       A[Spring Data REST `/employees`]-->B[Employee DAO; Spring Data JPA]
       B-->C[DB]
