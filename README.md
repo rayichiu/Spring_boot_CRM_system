@@ -45,6 +45,9 @@ Application Architechture Version 1
 #### Using spring-data-jpa to generate Data Access Object (DAO)
 No need to write EmployeeDAO interface and the corresponding DAO implementation
 
+change page size to 20 in the application.properties file
+In EmployeeRepository (comment out the annotation) change the path from /employees to /members
+
 ```
 Application Architechture Version 2
   graph LR
