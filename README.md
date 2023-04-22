@@ -45,9 +45,6 @@ Application Architechture Version 1
 #### Using spring-data-jpa to generate Data Access Object (DAO)
 No need to write EmployeeDAO interface and the corresponding DAO implementation
 
-change page size to 20 in the application.properties file
-In EmployeeRepository (comment out the annotation) change the path from /employees to /members
-
 ```
 Application Architechture Version 2
   graph LR
@@ -59,6 +56,9 @@ Application Architechture Version 2
 ### 04-spring-boot-rest-crud-employee-with-spring-data-rest
 #### Using spring-data-rest to generate Rest end points
 Don't need to write employee rest controller and Employee Service, spring data rest will create the end points for free. Just need the entity, the JPA repository, the Maven POM entry and the main spring boot application.
+
+Change page size to 20 in the application.properties file.  
+In EmployeeRepository (comment out the annotation) change the path from `/employees` to `/members`  
 
 ```
 Application Architechture Version 3
