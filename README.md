@@ -45,6 +45,9 @@ Application Architechture Version 1
 #### Using spring-data-jpa to generate Data Access Object (DAO)
 No need to write EmployeeDAO interface and the corresponding DAO implementation
 
+Further add Spring Security (Servlet Filters):
+Protect the web resources by check the authenticate userID and password. If the user has the authorized role, user can access the resources.
+
 ```
 Application Architechture Version 2
   graph LR
@@ -80,3 +83,4 @@ Data Access Object (DAO) - helper class to communicate with DB,
 DAO layer, Service layer,
 Spring Data Rest (automatically creating Rest API given Entity and Primary key) -
 Configuration, Pagination and Sorting
+Spring Security (authenticaton and Authorization) - noop (plain text passwords), bcrypt (one way encryption algorithm)
