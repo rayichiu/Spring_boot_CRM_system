@@ -1,4 +1,6 @@
 ## Project folder
+#### There are four project folders, which refer to the same CRM web service. The variation stems from using distinct spring boot application packages to write the code. The `03-spring-boot-rest-crud-employee-with-spring-data-jpa` folder is the main project folder that I add in most of the features (Web security and frontend application).  
+
 ### 01-spring-boot-rest-crud
 This is the Student Information Service API. 
 It comprises of functions that retrieve data of existing students 
@@ -46,7 +48,8 @@ Application Architechture Version 1
 No need to write EmployeeDAO interface and the corresponding DAO implementation
 
 Further add Spring Security (Servlet Filters):
-Protect the web resources by check the authenticate userID and password. If the user has the authorized role, user can access the resources.
+Protect the web resources by check the authenticate userID and password. If the user has the authorized role, user can access the resources.  
+The noop and bcrypt script are in `spring-boot-employee-sql-script` folder, no need to write different java code. 
 
 ```
 Application Architechture Version 2
@@ -69,10 +72,10 @@ Application Architechture Version 3
       A[Spring Data REST `/employees`]-->B[Employee DAO; Spring Data JPA]
       B-->C[DB]
 ```
-#### Technical stack
+### Technical stack
 Maven, Git, Spring boot, Spring MVC, Hibernate, JPA, Thymeleaf, Spring MVC, Postman
 
-#### Keywords
+### Keywords
 AOP Programming, Java Spring Boot Framework,
 Spring data JPA (Database related work, automatic CRUD implementation),
 Web (Restful services),
