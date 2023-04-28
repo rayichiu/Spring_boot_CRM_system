@@ -1,5 +1,5 @@
 ## Project folder
-#### There are four project folders, which refer to the same CRM web service. The variation stems from using distinct spring boot application packages to write the code. The `03-spring-boot-rest-crud-employee-with-spring-data-jpa` folder is the main project folder that I add in most of the features (Web security and frontend application).  
+#### There are four project folders, which refer to the same CRM web service. The variation stems from using distinct spring boot application packages to write the code. The `03-spring-boot-rest-crud-employee-with-spring-data-jpa` folder is the main project folder that I add in most of the features (Web security and frontend application - thymeleaf).  
 
 ### 01-spring-boot-rest-crud
 This is the Student Information Service API. 
