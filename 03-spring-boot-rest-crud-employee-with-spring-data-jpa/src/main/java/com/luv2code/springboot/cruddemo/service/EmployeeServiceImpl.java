@@ -2,6 +2,7 @@ package com.luv2code.springboot.cruddemo.service;
 
 import com.luv2code.springboot.cruddemo.dao.EmployeeRepository;
 import com.luv2code.springboot.cruddemo.entity.Employee;
+import com.luv2code.springboot.cruddemo.rest.EmployeeNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +36,8 @@ public class EmployeeServiceImpl implements EmployeeService{
       theEmployee = result.get();
     }else{
       // we didn't find the employee
-      throw new RuntimeException("Did not find employee id - " + theId);
+      throw new EmployeeNotFoundException("Did not find employee id - " + theId);
+//      throw new RuntimeException("Did not find employee id - " + theId);
     }
     return theEmployee;
   }
