@@ -37,13 +37,25 @@ public class EmployeeRestController {
     return employeeService.findAll();
   }
 
+//  // add mapping for GET /employees/{employeeId}
+//  @ResponseBody
+//  @GetMapping("/employees/{employeeId}")
+//  public Employee getEmployees(@PathVariable int employeeId){
+//    Employee theEmployee = employeeService.findById(employeeId);
+//    if (theEmployee == null){
+//      throw new RuntimeException("Employee id not found - " + employeeId);
+//    }
+//    return theEmployee;
+//  }
+
   // add mapping for GET /employees/{employeeId}
   @ResponseBody
   @GetMapping("/employees/{employeeId}")
-  public  Employee getEmployees(@PathVariable int employeeId){
+  public Employee getEmployees(@PathVariable int employeeId){
     Employee theEmployee = employeeService.findById(employeeId);
     if (theEmployee == null){
-      throw new RuntimeException("Employee id not found - " + employeeId);
+      throw new EmployeeNotFoundException("Did not find employee id - " + employeeId);
+//      throw new RuntimeException("Employee id not found - " + employeeId);
     }
     return theEmployee;
   }
