@@ -21,7 +21,6 @@ public class EmployeeRestController {
 //    employeeDAO = theEmployeeDAO;
 //  }
 
-
   // instead using service to follow the application architecture
   private EmployeeService employeeService;
 
@@ -142,6 +141,11 @@ public class EmployeeRestController {
     employeeService.deleteById(theId);
     // redirect to /employees/list
     return "redirect:/api/employees/list";
+  }
+
+  @GetMapping("/employees/home")
+  public String showHome(){
+    return "employees/home";
   }
 
 }
