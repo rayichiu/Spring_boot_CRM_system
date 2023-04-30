@@ -148,4 +148,8 @@ public class EmployeeRestController {
     return "employees/home";
   }
 
+  @GetMapping("/employees/showMyLoginPage")
+  public String showMyLoginPage() {
+    return "employees/plain-login";
+  }
 }
