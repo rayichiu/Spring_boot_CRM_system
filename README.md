@@ -51,6 +51,15 @@ Further add Spring Security (Servlet Filters):
 Protect the web resources by check the authenticate userID and password. If the user has the authorized role, user can access the resources.  
 The noop and bcrypt script are in `spring-boot-employee-sql-script` folder, no need to write different java code. 
 
+Spring Security Development Processes:  
+• Secure Spring MVC Web Apps  
+• Develop login pages (default and custom)  
+• Define users and roles with simple authentication  
+• Protect URLs based on role  
+• Hide/show content based on role  
+• Store users, passwords and roles in DB (plain-text -> encrypted)  
+• Develop logout support
+
 ```
 Application Architechture Version 2
   graph LR
@@ -58,6 +67,19 @@ Application Architechture Version 2
       B-->C[Employee DAO; Spring Data JPA]
       C-->D[DB]
 ```
+
+Request URL: `http://localhost:8080/api/employees/home`
+1. User login page
+The request will be direct to login page  
+![login page](/graphs/login_page.png)
+2. After login will be direct to home page  
+![home page](/graphs/home_page.png)
+3. The link can see the employee list page (all roles can see this resource)  
+![employee list page](/graphs/employee_list_page.png)
+4. Only admin or manager can add employee to employee list  
+![add employee](/graphs/add_employee.png)
+5. Only admin can delete an employee from employee list  
+
 
 ### 04-spring-boot-rest-crud-employee-with-spring-data-rest
 #### Using spring-data-rest to generate Rest end points
@@ -87,3 +109,8 @@ DAO layer, Service layer,
 Spring Data Rest (automatically creating Rest API given Entity and Primary key) -
 Configuration, Pagination and Sorting
 Spring Security (authenticaton and Authorization) - noop (plain text passwords), bcrypt (one way encryption algorithm)
+
+### Reference
+Spring Boot 3, Spring 6 & Hibernate  
+Instructor: Chad Darby  
+https://www.udemy.com/course/spring-hibernate-tutorial/

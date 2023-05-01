@@ -52,7 +52,17 @@ public class DemoSecurityConfig {
             .requestMatchers(HttpMethod.GET, "/api/employees/**").hasRole("EMPLOYEE")
             .requestMatchers(HttpMethod.POST, "/api/employees").hasRole("MANAGER")
             .requestMatchers(HttpMethod.PUT, "/api/employees").hasRole("MANAGER")
-            .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN"));
+            .requestMatchers(HttpMethod.POST, "/api/employees/save").hasRole("MANAGER")
+            .requestMatchers(HttpMethod.DELETE, "/api/employees/**").hasRole("ADMIN")
+        )
+        .formLogin(form ->
+            form
+                .loginPage("/api/employees/showMyLoginPage")
+                .loginProcessingUrl("/api/employees/authenticateTheUser")
+                .permitAll()
+        )
+        .logout(logout -> logout.permitAll()
+        );
     // use HTTP Basic authentication
     http.httpBasic();
 
