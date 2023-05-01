@@ -71,7 +71,8 @@ Application Architechture Version 2
 Request URL: `http://localhost:8080/api/employees/home`
 1. User login page
 The request will be direct to login page  
-![login page](/graphs/login_page.png "login page"){:height="50%" width="50%"}
+![login page](/graphs/login_page.png "login page")
+<img src="/graphs/login_page.png" width = "50%" height = "50%" alt="login_page"/>
 2. After login will be direct to home page  
 ![home page](/graphs/home_page.png)
 3. The link can see the employee list page (all roles can see this resource)  
