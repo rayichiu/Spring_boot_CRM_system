@@ -51,6 +51,15 @@ Further add Spring Security (Servlet Filters):
 Protect the web resources by check the authenticate userID and password. If the user has the authorized role, user can access the resources.  
 The noop and bcrypt script are in `spring-boot-employee-sql-script` folder, no need to write different java code. 
 
+Spring Security Development Processes:  
+• Secure Spring MVC Web Apps  
+• Develop login pages (default and custom)  
+• Define users and roles with simple authentication  
+• Protect URLs based on role  
+• Hide/show content based on role  
+• Store users, passwords and roles in DB (plain-text -> encrypted)  
+• Develop logout support
+
 ```
 Application Architechture Version 2
   graph LR
@@ -87,3 +96,8 @@ DAO layer, Service layer,
 Spring Data Rest (automatically creating Rest API given Entity and Primary key) -
 Configuration, Pagination and Sorting
 Spring Security (authenticaton and Authorization) - noop (plain text passwords), bcrypt (one way encryption algorithm)
+
+### Reference
+Spring Boot 3, Spring 6 & Hibernate  
+Instructor: Chad Darby  
+https://www.udemy.com/course/spring-hibernate-tutorial/

@@ -150,6 +150,7 @@ public class EmployeeRestController {
 
   @GetMapping("/employees/showMyLoginPage")
   public String showMyLoginPage() {
-    return "employees/plain-login";
+//    return "employees/plain-login";
+    return "employees/fancy-login";
   }
 }
