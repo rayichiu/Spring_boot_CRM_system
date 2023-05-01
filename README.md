@@ -71,14 +71,17 @@ Application Architechture Version 2
 Request URL: `http://localhost:8080/api/employees/home`
 1. User login page
 The request will be direct to login page  
-![login page](/graphs/login_page.png "login page")
-<img src="/graphs/login_page.png" width = "50%" height = "50%" alt="login_page"/>
+<!-- ![login page](/graphs/login_page.png "login page") -->
+<img src="/graphs/login_page.png" width = "50%" height = "50%" alt="login_page"/>  
 2. After login will be direct to home page  
-![home page](/graphs/home_page.png)
+<!-- ![home page](/graphs/home_page.png) -->
+<img src="/graphs/home_page.png" width = "60%" height = "60%" alt="home_page"/>  
 3. The link can see the employee list page (all roles can see this resource)  
-![employee list page](/graphs/employee_list_page.png)
+<!-- ![employee list page](/graphs/employee_list_page.png) -->
+<img src="/graphs/employee_list_page.png" width = "60%" height = "60%" alt="employee_list_page"/>  
 4. Only admin or manager can add employee to employee list  
-![add employee](/graphs/add_employee.png)
+<!-- ![add employee](/graphs/add_employee.png) -->
+<img src="/graphs/add_employee.png" width = "60%" height = "60%" alt="add_employee"/> 
 5. Only admin can delete an employee from employee list  
 
 
