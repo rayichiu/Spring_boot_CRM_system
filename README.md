@@ -68,6 +68,19 @@ Application Architechture Version 2
       C-->D[DB]
 ```
 
+Request URL: `http://localhost:8080/api/employees/home`
+1. User login page
+The request will be direct to login page  
+![login page](/graphs/login_page.png)
+2. After login will be direct to home page  
+![home page](/graphs/home_page.png)
+3. The link can see the employee list page (all roles can see this resource)  
+![employee list page](/graphs/employee_list_page.png)
+4. Only admin or manager can add employee to employee list  
+![add employee](/graphs/add_employee.png)
+5. Only admin can delete an employee from employee list  
+
+
 ### 04-spring-boot-rest-crud-employee-with-spring-data-rest
 #### Using spring-data-rest to generate Rest end points
 Don't need to write employee rest controller and Employee Service, spring data rest will create the end points for free. Just need the entity, the JPA repository, the Maven POM entry and the main spring boot application.
